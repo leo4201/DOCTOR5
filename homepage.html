@@ -1,0 +1,384 @@
+ <!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Home|Doctor's Portal</title>
+	<link rel="stylesheet" href="css/homepage.css" type="text/css">
+	<link rel="stylesheet" href="css/newlogin.css" type="text/css">
+	<script>
+function validate()			<!--To check entered id and password are of atleast 4 digits-->
+{
+var x=document.getElementsByClassName("class");
+if(x[0].value.length<4)
+{
+alert("user id is not valid");
+return(false);
+}
+if(x[1].value.length<4)
+{
+alert("password is not valid");
+return(false);
+}
+}
+	
+function validate()			<!--To check entered id and password are of atleast 4 digits-->
+{
+var x=document.getElementsByClassName("class");
+if(x[2].value.length<4)
+{
+alert("user id is not valid");
+return(false);
+}
+if(x[3].value.length<4)
+{
+alert("password is not valid");
+return(false);
+}
+}
+
+function validate()			<!--To check entered id and password are of atleast 4 digits-->
+{
+var x=document.getElementsByClassName("class");
+if(x[4].value.length<4)
+{
+alert("user id is not valid");
+return(false);
+}
+if(x[5].value.length<4)
+{
+alert("password is not valid");
+return(false);
+}
+}
+
+
+</script>
+<style>
+div1 {
+	float: right;
+}
+button {
+    background: #009999;
+	border-color:#126663;
+	border-radius:5px;
+	border-style:none solid;
+	border-width:1px;
+	color:white;
+	display:block;
+	font-size:12px;
+	height:36px;
+	line-height:auto;
+	text-align:center;
+	text-decoration:none;
+	text-transform:uppercase;
+	width:100px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+img.avatar {
+    width: 10%;
+    border-radius: 50%;
+}
+</style>
+</head>
+<body>
+
+	<div class="background">
+	
+		<div class="page">
+						
+			
+			<a href="homepage.html" id="logo">Doctor's Portal</a> 
+			<div1>
+			
+			<button onclick="document.getElementById('id00').style.display='block'" style="width:auto;"> Patient Login</button>
+
+<div id="id00" class="modal">
+  
+  <form class="modal-content animate" action="patientsession.php"  method="post" onsubmit="return validate()">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id00').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="http://www.backgroundsy.com/file/preview/user-icon.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+ 
+      <label><b>Username</b></label>
+      <input class="class1" type="text" placeholder="Enter Username" name="id" required>
+
+      <label><b>Password</b></label>
+      <input class="class1" type="password" placeholder="Enter Password" name="pass" required>
+        
+      <button type="submit">Login</button>
+	  Not a member yet! <a href="patientregister.php">Register</a>
+      <input type="checkbox" checked="checked"> Remember me
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id00').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Doctor Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" method="post" action="doctorsession.php" onsubmit="return validate()">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="https://cdn1.iconfinder.com/data/icons/medical-services-3/500/Doctor-22-512.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+ 
+      <label><b>Username</b></label>
+      <input class="class" type="text" placeholder="Enter Username" name="id" required>
+
+      <label><b>Password</b></label>
+      <input class="class" type="password" placeholder="Enter Password" name="pass" required>
+        
+      <button type="submit">Login</button>
+      <input type="checkbox" checked="checked"> Remember me
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+</div1>
+			<div class="sidebar">
+				<ul>
+					<li class="selected">
+						<a href="homepage.html">Home</a>
+					</li>
+					<li>
+						<a href="programs.html">Programs</a>
+					</li>
+					<li>
+						<a href="about.html">About</a>
+					</li>
+					<li>
+						<a href="services.html">Services</a>
+					</li>
+					<li>
+						<a href="blog.html">Blog</a>
+						
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+					<button onclick="document.getElementById('id02').style.display='block'" style="width:225px;">Admin Login</button>
+
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate" method="post" action="adminsession.php" onsubmit="return validate()">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="https://cdn1.iconfinder.com/data/icons/medical-services-3/500/Doctor-22-512.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+ 
+      <label><b>Username</b></label>
+      <input class="class" type="text" placeholder="Enter Username" name="adminid" required>
+
+      <label><b>Password</b></label>
+      <input class="class" type="password" placeholder="Enter Password" name="adminpass" required>
+        
+      <button type="submit">Login</button>
+      <input type="checkbox" checked="checked"> Remember me
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+
+				</ul>
+	
+				<div class="first">
+					<div>
+						<h3>This is just a place holder</h3>
+						<img src="images/man.jpg" alt="">
+						<p>
+							This is just a place holder, so you can  see what the site would look like.
+						</p>
+					</div>
+				</div>
+				<div>
+					<div>
+						<h3>This is just a place holder</h3>
+						<p>
+							You can replace all this text with your own text.
+						</p>
+						<img src="images/doctors-and-nurse.jpg" alt="">
+						<p>
+							You can remove any link to our website from this website template, you&#39;re free to use this website template without linking back to us. You can remove any link to our website from this website template, you&#39;re free to use this website template without linking back to us. This is a place holder, so you can see what the site would look like.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="body">
+			
+				<div class="home">
+					<div class="featured">
+						<img src="images/doctors.jpg" alt="">
+						<div>
+							<p>
+								Here you can find your heatlh solutions from experts.
+							</p>
+						</div>
+					</div>
+					<div>
+						<div>
+							<div>
+								<h4>Programs</h4>
+								<h3>This is a Free Website Template</h3>
+								<p>
+									You can remove any link to our website from this website template, you&#39;re free to use this website template without linking back to us. <a href="programs.html"><img src="images/programs.jpg" alt=""></a> This is just a place holder, so you can see what the site would look like. This is just a place holder, so you can see what the site would look like.
+								</p>
+								<span><a href="programs.html">Learn More</a></span>
+							</div>
+							<div>
+								<h4>Therapy</h4>
+								<h2>You can replace all this text with your own text</h2>
+								<ul>
+									<li>This is just a place holder, so you can see what the site would look like.</li>
+									<li>This is just a place holder</li>
+									<li>You can remove any link to our website from this website template.</li>
+									<li>This is just a place holder</li>
+									<li>You&#39;re free to use this website template without linking back to us.</li>
+								</ul>
+								<span><a href="programs.html">Learn More</a></span>
+							</div>
+						</div>
+						<div>
+							<h4>Services</h4>
+							<a href="services.html"><img src="images/services.jpg" alt=""></a>
+							<ul>
+								<li>
+									<a href="services.html">Lorem ipsum dolor</a>
+								</li>
+								<li>
+									<a href="services.html">Consectetur adipiscing</a>
+								</li>
+								<li>
+									<a href="services.html">This is just a place holder</a>
+								</li>
+								<li>
+									<a href="services.html">Nullam eu diam eros</a>
+								</li>
+								<li>
+									<a href="services.html">Vestibulum fermentum</a>
+								</li>
+								<li>
+									<a href="services.html">Donec risus nulla</a>
+								</li>
+								<li>
+									<a href="services.html">This is just a place holder</a>
+								</li>
+								<li>
+									<a href="services.html">Nullam eu diam eros</a>
+								</li>
+								<li>
+									<a href="services.html">Lorem ipsum dolor</a>
+								</li>
+								<li>
+									<a href="services.html">Consectetur adipiscing</a>
+								</li>
+								<li>
+									<a href="services.html">This is just a place holder</a>
+								</li>
+								<li>
+									<a href="services.html">Nullam eu diam eros</a>
+								</li>
+								<li>
+									<a href="services.html">Lorem ipsum dolor</a>
+								</li>
+								<li>
+									<a href="services.html">Consectetur adipiscing</a>
+								</li>
+							</ul>
+							<span><a href="programs.html">Learn More</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div>
+					<div>
+						<h4>Blog</h4>
+						<p>
+							This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text.
+						</p>
+						<a href="blog.html">Go To Blog</a>
+					</div>
+					<div>
+						<h4>Links</h4>
+						<ul>
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+							<li>
+								<a href="programs.html">Programs</a>
+							</li>
+							<li>
+								<a href="about.html">About</a>
+							</li>
+							<li>
+								<a href="services.html">Services</a>
+							</li>
+							<li>
+								<a href="blog.html">Blog</a>
+							</li>
+							<li>
+								<a href="contact.html">Contact</a>
+							</li>
+						</ul>
+					</div>
+					<div class="connect">
+						<h4>Keep In Touch</h4>
+						<a href="http://twitter.com/Sarkerleon" id="twitter">twitter</a> <a href="http://facebook.com" id="facebook">facebook</a> <a href="http://google.com" id="googleplus">google+</a>
+					</div>
+				</div>
+				<p>
+					&#169; Copyright 2017. All rights reserved by Zain.
+				</p>
+			</div>
+		</div>
+	</div>
+	
+<script>
+// Get the modal
+
+var modal = document.getElementById('id00');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+var modal = document.getElementById('id02');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>
